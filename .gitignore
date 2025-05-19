@@ -1,0 +1,28 @@
+# Python bytecode and cache
+__pycache__/
+*.pyc
+
+# VS Code settings (optional, but common)
+.vscode/
+
+# Mac/Windows system files
+.DS_Store
+Thumbs.db
+
+# XML output files
+testfiles/WMS_TMS_*.xml
+
+# (Optional) Ignore all XML files in testfiles folder
+# testfiles/*.xml
+
+# Ignore temp and backup files
+*~
+*.bak
+
+# Ignore environment files if you ever use them
+.env
+.venv/
+venv/
+
+# Ignore log files
+*.log
