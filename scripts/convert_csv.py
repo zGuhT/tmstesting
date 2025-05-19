@@ -7,7 +7,7 @@ import xml.dom.minidom
 
 testfiles_dir = "testfiles"
 file_pattern = os.path.join(testfiles_dir, "tms_test_*.csv")
-start_index = 100000
+start_index = 900100000
 
 if len(sys.argv) != 2:
     print("Usage: python convert_csv.py <test_file_number>")
@@ -43,7 +43,7 @@ for csv_file in previous_files:
 # Process the target file
 with open(target_filename, newline='', encoding="utf-8") as f:
     reader = csv.reader(f)
-    headers = next(reader)
+    headers = next(reader)[1:]
     current_index = start_index + total_prior_rows
     row_num = 0
     for row in reader:
@@ -57,7 +57,7 @@ with open(target_filename, newline='', encoding="utf-8") as f:
         ET.SubElement(root, "ContentType").text = "text/plain"
         ET.SubElement(root, "Content")  # Placeholder
 
-        row_data = "|".join(row)
+        row_data = "|".join(row[1:])  # Skip the first column (index)
         cdata_content = f"<![CDATA[{ '|'.join(headers) }\n{ row_data }\n]]>"
 
         xml_str = ET.tostring(root, encoding="unicode")

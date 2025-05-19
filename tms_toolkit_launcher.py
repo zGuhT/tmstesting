@@ -9,7 +9,7 @@ SCRIPTS = [
     ("Validate a CSV File", "validate_csv.py"),
     ("Validate All XML Outputs", "validate_xmls.py"),
     ("Pretty Print XML", "pretty_print_xml.py"),
-    ("POST XML to Integration Endpoint (smoke test)", "smoke_test_post_xml.py"),
+    ("Copy XML Files to Network Folder", "copy_xmls_to_network.py"),
     ("Generate Markdown Test Manifest", "generate_test_manifest.py"),
     ("Git Add/Commit/Push", "git_push.py"),
     ("Archive All XML Outputs", "archive_results.py"),
